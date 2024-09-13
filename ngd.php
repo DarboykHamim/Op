@@ -116,7 +116,7 @@ function getKfcNagadInfo($number, $pin, $try = 0){
 				foreach($res['aspAdditionalData']['documentList'] as $document){
 					$index = [];
 					$index['type'] = $document['documentType'];
-					$index['file'] = 'http://localhost/img.php?userId='.urlencode($kfcAutToken['userId']).'&mpaId='.urlencode($kfcAutToken['mpaId']).'&token='.urlencode($kfcAutToken['token']).'&fileUrl='.urlencode($document['fileUrl']);
+					$index['file'] = 'https://op-ruddy.vercel.app/img.php?userId='.urlencode($kfcAutToken['userId']).'&mpaId='.urlencode($kfcAutToken['mpaId']).'&token='.urlencode($kfcAutToken['token']).'&fileUrl='.urlencode($document['fileUrl']);
 					array_push($result['documentList'], $index);
 				}
 			}
